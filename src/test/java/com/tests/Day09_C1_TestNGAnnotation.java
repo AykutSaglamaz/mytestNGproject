@@ -10,6 +10,7 @@ public class Day09_C1_TestNGAnnotation {
      * @BeforeMethod her @Test Annotation once kosmasi icin kullanilir. JUnit deki @Before ile ayni
      * @AfterMethod her @Test annotation sonra kosmasi icin kullanilir
      * @Ignore bir @Test annotation atlamak icin
+     *
      * @Test(enabled = false) de ayrica @Test annotation atlamak icin kullanilir.  @Ignore gibidir
      *
      * Test cases siralama:
@@ -18,7 +19,7 @@ public class Day09_C1_TestNGAnnotation {
      * @Test(priority = 1 )
      *
      *neden @BeforeMethod annotation?
-     * - on conditions - driver'i olustur, maximizing screen, timeouts, ... tekrari engeller
+     * - on conditions/sartlar - driver'i olustur, maximizing screen, timeouts, ... tekrari engeller
      *
      *neden @AfterMethod annotation?
      * -Post conditions - driver'i kapamak icin, tekrardan kacinmak icin, report generate
@@ -48,7 +49,7 @@ public class Day09_C1_TestNGAnnotation {
 //        System.out.println("Test 3");
 //    }
 
-    @Test(priority = -3,groups="regression-group-1")
+    @Test(priority = -3, groups="regression-group-1")
     public void test4(){
         System.out.println("Test 4");
     }
@@ -56,6 +57,4 @@ public class Day09_C1_TestNGAnnotation {
     public void test5(){
         System.out.println("Test 5");
     }
-//-3     -> 1   ->    2
-//Test 4 Test 1   Test 5
 }
