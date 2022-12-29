@@ -21,6 +21,7 @@ public class Day09_C7_FirstConfigTest {
         //   Title'in' Caretta Hotel - Home oldugunu assert et
         String actualTitle = Day09_C4_Driver.getDriver().getTitle();
         String expectedTitle = Day09_C6_ConfigReader.getProperty("app_title");
+
         Assert.assertEquals(actualTitle, expectedTitle);
     }
 }
