@@ -36,7 +36,7 @@ public class Day09_C10_PositiveLoginTest {
         //We need to automate the login success
         //We choose a CORE ELEMENT on the page
 
-        //adduser buttonunu kullanarak login page'e giris yaptiginizi verify verify edin
+        //adduser buttonunu kullanarak login page'e giris yaptiginizi verify edin
         //At this point, we are on the Default Page
 
         Day09_C13_DefaultPage defaultPage = new Day09_C13_DefaultPage();

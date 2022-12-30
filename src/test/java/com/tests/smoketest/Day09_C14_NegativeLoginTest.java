@@ -7,8 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class Day09_C14_NegativeLoginTest {
-    @Test
 
+    @Test
     public void invalidPassword(){
         Day09_C4_Driver.getDriver().get(Day09_C6_ConfigReader.getProperty("app_url_login"));
 //        Test Data:
@@ -20,12 +20,13 @@ public class Day09_C14_NegativeLoginTest {
   // eger private isterse
   loginPage.advancedLink.click();
   loginPage.proceedLink.click();
- //        When user enters wrong password only
+
+ // When kullanici sadece yanlis password girer
         loginPage.username.sendKeys("manager");//right id
         loginPage.password.sendKeys("Manage!");//wrong pass
         loginPage.loginButton.click();
 
-// Then verify the error message includes “Wrong password”
+// Then error mesajin “Wrong password” icerdigini verify et
         String actualErrorMessage=loginPage.errorMessage.getText();
         Assert.assertTrue(actualErrorMessage.contains("Wrong password"));
 
@@ -35,7 +36,7 @@ public class Day09_C14_NegativeLoginTest {
     @Test
     public void invalidID(){
 //        invalidID()
-//        When user enters wrong id only
+
         Day09_C4_Driver.getDriver().get(Day09_C6_ConfigReader.getProperty("app_url_login"));
         Day09_C12_LoginPage loginPage = new Day09_C12_LoginPage();
 
@@ -43,13 +44,13 @@ public class Day09_C14_NegativeLoginTest {
         loginPage.advancedLink.click();
         loginPage.proceedLink.click();
 
+//        When  kullanici sadece yanlis username girer
         loginPage.username.sendKeys(Day09_C6_ConfigReader.getProperty("wrong_manager_username"));//wrong id
-
         loginPage.password.sendKeys(Day09_C6_ConfigReader.getProperty("manager_password"));
         loginPage.loginButton.click();
 
 
-//        Then verify the error message includes “Try again please”
+//        Then error mesajin “Try again please” icerdigini verify et
         String actualErrorMessage = loginPage.errorMessage.getText();
         System.out.println(actualErrorMessage);
         Assert.assertTrue(actualErrorMessage.contains("Try again please"));
@@ -71,11 +72,12 @@ public class Day09_C14_NegativeLoginTest {
         loginPage.advancedLink.click();
         loginPage.proceedLink.click();
 
+//        When  kullanici yanlis username ve password girer
         loginPage.username.sendKeys(Day09_C6_ConfigReader.getProperty("wrong_manager_username"));//wrong id
         loginPage.password.sendKeys(Day09_C6_ConfigReader.getProperty("wrong_manager_password"));//wrong password
         loginPage.loginButton.click();
 
-//        Then verify the error message includes “Username or password is incorrect, please correct them and try again”
+//        Then error mesajin “Username or password is incorrect, please correct them and try again” icerdigini verify et
         String actualErrorMessage = loginPage.errorMessage.getText();
         System.out.println(actualErrorMessage);
         Assert.assertTrue(actualErrorMessage.contains("Username or password is incorrect, please correct them and try again"));
