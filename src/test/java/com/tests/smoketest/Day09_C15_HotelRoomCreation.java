@@ -99,6 +99,7 @@ public class Day09_C15_HotelRoomCreation {
 
         WebDriverWait wait = new WebDriverWait(Day09_C4_Driver.getDriver(),10);
         WebElement popupMessageElement = wait.until(ExpectedConditions.visibilityOf(hotelRoomsPage.popupMessage));
+
         //Verify the message: HotelRoom was inserted successfully
         //Asserting message
         Assert.assertEquals(popupMessageElement.getText(),"HotelRoom was inserted successfully");
