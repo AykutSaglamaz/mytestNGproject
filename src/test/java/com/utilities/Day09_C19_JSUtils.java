@@ -49,7 +49,7 @@ public class Day09_C19_JSUtils {
             changeColor(bgColor, element);
         }
     }
-    //this will generate an alert when needed
+    //Ihtiyac duydugunda bir alert olusturur
     public static void generateAlert(String message) throws InterruptedException {
         JavascriptExecutor javascriptExecutor = ((JavascriptExecutor) Day09_C4_Driver.getDriver());
         javascriptExecutor.executeScript("alert('" + message + "')");
