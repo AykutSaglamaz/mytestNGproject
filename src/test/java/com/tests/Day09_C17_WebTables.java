@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -29,7 +30,9 @@ public class Day09_C17_WebTables {
     Day09_C12_LoginPage loginPage;
     Day09_C13_DefaultPage defaultPage;
     Day09_C16_HotelRoomPage hotelRoomsPage;
+
     //    When kullanici application'da HotelRoom sayfasina gider
+    @BeforeMethod
     public void setUp(){
         Day09_C4_Driver.getDriver().get(Day09_C6_ConfigReader.getProperty("app_url_login"));
         loginPage= new Day09_C12_LoginPage();
@@ -64,6 +67,8 @@ public class Day09_C17_WebTables {
 
         WebElement tableBody = Day09_C4_Driver.getDriver().findElement(By.xpath("//table//tbody"));
         System.out.println(tableBody.getText());
+
+    //ve tum header'lari yazdir
         List<WebElement> allHeaders = Day09_C4_Driver.getDriver().findElements(By.xpath("//th"));
         for (WebElement eachHeader : allHeaders){
             System.out.println(eachHeader.getText());
@@ -95,6 +100,7 @@ public class Day09_C17_WebTables {
         System.out.println("*Print Cells*");
         List<WebElement> allCells = Day09_C4_Driver.getDriver().findElements(By.xpath("//tbody//td"));
         System.out.println("Total Cell Number => " +allCells.size());
+    // tum cell'leri yazdir
         int cellNum=1;
         for (WebElement eachCell : allCells){
             System.out.println(cellNum +" : "+eachCell.getText());
