@@ -126,23 +126,23 @@ public class Day09_C21_ReadExcel {
         String path = "./src/test/java/resources/Capitals.xlsx";
         String sheetName="capitals_sheet";
 
-        //To use the ExcelUtil class, first create ExcelUtil Object
+        //ExcelUtil class'i okumak icin once ExcelUtil Object olusturulmali
         Day09_C20_ExcelUtil excelUtil = new Day09_C20_ExcelUtil(path,sheetName);
 
-        //Now I can call the reusable excel methods
+        //Reusable excel methods'larini cagirabiliriz
         //getDataList()
         System.out.println(excelUtil.getDataList());
 
-        //Find the number of column in Capitals
+        //Baskent'teki column sayisini bulun
         System.out.println(excelUtil.columnCount());//2
 
-        //Find the number of row in Capitals sheet
+        //Baskent sheet'teki row sayisini bulun
         System.out.println(excelUtil.rowCount());//11
 
-        //Find the data in row 9 column 1
+        //row 9 column 1'deki datayi bulun
         System.out.println(excelUtil.getCellData(8,0));//Almanya
 
-        //Find all column names
+        //column header isimlerinin tumunu bulun
         System.out.println(excelUtil.getColumnsNames());//[COUNTRY-R0C0, CAPITAL-R0C1]
 
     }
