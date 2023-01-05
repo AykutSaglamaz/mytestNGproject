@@ -61,7 +61,7 @@ public class Day09_C17_WebTables {
 //    test method: entireTable() ve tum header'lari yazdir
     @Test(groups = "regression-group-1")
     public void entireTable(){
-        setUp();
+      //  setUp();
         System.out.println("*Entire Table*");
         System.out.println("*Table Body*");
 
