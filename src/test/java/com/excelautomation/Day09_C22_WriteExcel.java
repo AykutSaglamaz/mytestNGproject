@@ -31,7 +31,7 @@ public class Day09_C22_WriteExcel {
         FileInputStream fileInputStream = new FileInputStream(path);
 //        workbook ac
         Workbook workbook = WorkbookFactory.create(fileInputStream);
-//        ilk worksheet'i ac
+//        ilk worksheet'i ac/olustur
         Sheet sheet = workbook.getSheetAt(0);//index of sheet starts at 0
 //        ilk row'a git
         Row firstRow  = sheet.getRow(0);//index of row starts at 0
@@ -42,11 +42,11 @@ public class Day09_C22_WriteExcel {
         row1Cell3.setCellValue("Nufus");
 
 //        2. row 3. cell'de (index 2) cell olustur ve 150000 yaz (Create a cell on the 2nd row 3rd cell(index2), and write 150000
-        sheet.getRow(1).createCell(2).setCellValue("150000");
+        sheet.getRow(1).createCell(2).setCellValue("150001");
 //       3. row 3. cell de bir cell olustur ve 250000 yaz ( Create a cell on the 3rd row 3rd cell(index2), and write 250000
-        sheet.getRow(2).createCell(2).setCellValue("250000");
+        sheet.getRow(2).createCell(2).setCellValue("250001");
 //        4. row 3. cell'de bir cell olustur ve 54000 yaz (Create a cell on the 4th row 3rd cell(index2), and write 54000
-        sheet.getRow(3).createCell(2).setCellValue("54000");
+        sheet.getRow(3).createCell(2).setCellValue("54001");
 
 //        workbook kaydet
         FileOutputStream fileOutputStream = new FileOutputStream(path);

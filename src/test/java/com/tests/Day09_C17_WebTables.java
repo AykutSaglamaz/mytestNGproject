@@ -5,6 +5,7 @@ import com.pages.Day09_C13_DefaultPage;
 import com.pages.Day09_C16_HotelRoomPage;
 import com.utilities.Day09_C4_Driver;
 import com.utilities.Day09_C6_ConfigReader;
+import org.apache.poi.ss.usermodel.Cell;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -128,6 +129,7 @@ public class Day09_C17_WebTables {
 
 //    test method: printData(int row, int column); Bu method veriline cell'i yazdirmali
 //    ornek : printData(2,3); 2. row ve 3 column yazdirmali
+
 
     @AfterMethod
     public void tearDown(){
