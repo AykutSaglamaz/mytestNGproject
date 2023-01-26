@@ -38,8 +38,13 @@ public class Day09_C17_WebTables {
         Day09_C4_Driver.getDriver().get(Day09_C6_ConfigReader.getProperty("app_url_login"));
         loginPage= new Day09_C12_LoginPage();
         //private isterse
-        loginPage.advancedLink.click();
-        loginPage.proceedLink.click();
+        try {
+            loginPage.advancedLink.click();
+            loginPage.proceedLink.click();
+        }catch (Exception e){
+            e.getMessage();
+        }
+
 
         loginPage.username.sendKeys(Day09_C6_ConfigReader.getProperty("manager_username"));
         loginPage.password.sendKeys(Day09_C6_ConfigReader.getProperty("manager_password"));
