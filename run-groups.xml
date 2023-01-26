@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Arcane-Test-Suite">
+    <test name="smoke-test">
+        <groups>
+            <run>
+                <!--Run only those have regression-group-1 tags from the WebTables and TestNGAnnotations class-->
+                <!-- @Test(groups="regression-group-1")--> <!-- @Test icerisinde yazilir -->
+                <include name="regression-group-1"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="com.tests"></package>
+        </packages>
+    </test>
+</suite>
